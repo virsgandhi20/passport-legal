@@ -5,7 +5,7 @@ body{background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacS
 main{max-width:680px;margin:0 auto}h1{font-size:34px;line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}
 h2{font-size:22px;margin:40px 0 8px}a{color:var(--link)}p,li{margin:8px 0}hr{border:0;border-top:1px solid var(--rule);margin:40px 0}
 nav{font-size:15px;color:var(--muted);margin-bottom:32px}</style></head><body><main><nav><a href="../../">Passport apps</a> · Stadium Passport</nav><h1>Stadium Passport Privacy Policy</h1>
-<p>Last updated: 13 October 2026</p>
+<p>Last updated: 14 October 2026</p>
 <p>Stadium Passport keeps a record of the ballparks and games you go to. This policy explains what the app
 handles and where it goes. The short version: your passport stays private, on your iPhone and in your iCloud.
 We have no servers that store your data, we don't track you, and there are no ads.</p>
@@ -24,7 +24,7 @@ We have no servers that store your data, we don't track you, and there are no ad
 (CloudKit). Apple stores this data under your Apple Account. We cannot see it. You can turn iCloud off for the app
 in Settings.</p>
 <h2>Photos</h2>
-<p>If you choose "Find my games", the app reads the location and date of photos in your library to find ones taken
+<p>If you choose "Find Games in My Photos", the app reads the location and date of photos in your library to find ones taken
 inside a ballpark. This happens <strong>entirely on your iPhone</strong>. Your photos and their locations are never uploaded.
 You can change Photos access at any time in Settings.</p>
 <h2>Services the app uses</h2>
@@ -32,8 +32,13 @@ You can change Photos access at any time in Settings.</p>
 <li><strong>Apple Weather (WeatherKit):</strong> to show the forecast for a game, the app sends the ballpark's location and the
   game time to Apple. Your own location is not used.</li>
 <li><strong>Apple Maps (MapKit):</strong> maps, 3D views and nearby parking are loaded from Apple using ballpark locations.</li>
-<li><strong>Scores and schedules:</strong> to look up games, the app requests schedules and scores for dates and teams from a
-  third-party sports data service through our data proxy. These requests contain no personal information.</li>
+<li><strong>Scores and schedules:</strong> to look up games, the app asks our data proxy (a small server function hosted by
+  Supabase) for schedules and scores by date, team or game. The proxy fetches them from a third-party sports data
+  service (BALLDONTLIE) and passes back only the game data. The requests contain no personal information and no
+  identifier for you or your device. Like any internet request, they reveal your IP address to the proxy; it is used
+  only in memory to limit how often one address can call, and is not stored or logged by us. The sports data service
+  sees only the proxy, never you. Supabase may keep standard technical request logs for a limited time to run its
+  service.</li>
 <li><strong>In-app purchases:</strong> Stadium Passport Pro is sold through the App Store. Apple handles payment; we only receive
   confirmation of what you're entitled to.</li>
 <li><strong>Notifications and Live Activities:</strong> game reminders are scheduled on your device. Live Activities show the score
